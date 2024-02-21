@@ -1,0 +1,18 @@
+<!-- profile.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль</title>
+</head>
+<body>
+  <h1>Профиль</h1>
+  <% if (user) { %>
+    <p>Добро пожаловать, <%= user.username %>!</p>
+    <a href="/api/user/logout">Выход</a>
+  <% } else { %>
+    <p>Пожалуйста войдите под своим логином <a href="/api/user/login">Вход</a></p>
+  <% } %>
+</body>
+</html>
